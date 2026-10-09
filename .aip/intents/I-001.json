@@ -22,7 +22,7 @@
   "assumptions": [],
   "needs_clarification": [],
   "acceptance_criteria": [],
-  "status": "implementing",
+  "status": "done",
   "history": [
     {
       "at": "2026-10-09T02:49:05.616882Z",
@@ -58,6 +58,13 @@
       "to_status": "implementing",
       "by": "developer",
       "note": "开始实现部门筛选"
+    },
+    {
+      "at": "2026-10-09T02:51:30.395507Z",
+      "from_status": "implementing",
+      "to_status": "done",
+      "by": "developer",
+      "note": "effort=2.5h"
     }
   ]
 }
