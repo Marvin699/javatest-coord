@@ -11,5 +11,5 @@
   "actual_effort": "2.5h",
   "lessons": "员工筛选类需求走 Controller→Service→Mapper→XML 四层，改签名要四层同步；查询已有 selectWithDept 片段可复用",
   "created_by": "developer",
-  "created_at": "2026-10-09T02:51:08.266867Z"
+  "created_at": "2026-10-09T02:51:29.996503Z"
 }
