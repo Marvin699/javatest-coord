@@ -1,0 +1,23 @@
+{
+  "id": "I-002",
+  "created_by": "customer-ai",
+  "created_at": "2026-10-09T03:01:13.171467Z",
+  "title": "部门详情页显示员工数量",
+  "description": "管理员打开部门详情页时，希望直接看到该部门当前有多少名员工，不用再去员工列表数。",
+  "priority": "medium",
+  "raw_quote": "",
+  "customer_analysis": null,
+  "assumptions": [],
+  "needs_clarification": [],
+  "acceptance_criteria": [],
+  "status": "submitted",
+  "history": [
+    {
+      "at": "2026-10-09T03:01:13.171760Z",
+      "from_status": "draft",
+      "to_status": "submitted",
+      "by": "customer-ai",
+      "note": ""
+    }
+  ]
+}
