@@ -1,0 +1,6 @@
+{
+  "_说明": "由开发侧 AI 填写后删除本字段；只收录代码里真实存在的接口",
+  "apis": [
+    { "method": "GET", "path": "/api/orders", "desc": "订单列表", "module": "orders" }
+  ]
+}

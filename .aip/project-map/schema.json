@@ -1,0 +1,6 @@
+{
+  "_说明": "由开发侧 AI 填写后删除本字段；只收录真实存在的数据表",
+  "tables": [
+    { "name": "orders", "fields": ["id", "user_id", "amount", "status"], "desc": "订单主表" }
+  ]
+}
