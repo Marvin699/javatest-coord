@@ -1,0 +1,50 @@
+{
+  "intent_id": "I-001",
+  "summary": "在现有 /admin/employee/search 链路上增加部门（department_id）筛选条件：Mapper 查询加条件、Controller 与 Service 传参、列表页加部门下拉框。复用现有 selectWithDept 片段，改动小。",
+  "files_to_change": [
+    "src/main/resources/mapper/EmployeeMapper.xml",
+    "src/main/java/com/hrsystem/mapper/EmployeeMapper.java",
+    "src/main/java/com/hrsystem/service/EmployeeService.java",
+    "src/main/java/com/hrsystem/service/impl/EmployeeServiceImpl.java",
+    "src/main/java/com/hrsystem/controller/admin/EmployeeController.java",
+    "src/main/resources/templates/admin/employee-list.html"
+  ],
+  "tasks": [
+    {
+      "id": "T001",
+      "title": "Mapper 查询加部门条件",
+      "files": [],
+      "parallel": false
+    },
+    {
+      "id": "T002",
+      "title": "Mapper/Service 接口同步加参",
+      "files": [],
+      "parallel": false
+    },
+    {
+      "id": "T003",
+      "title": "Controller 接参与注入部门列表",
+      "files": [],
+      "parallel": false
+    },
+    {
+      "id": "T004",
+      "title": "前端下拉框",
+      "files": [],
+      "parallel": false
+    }
+  ],
+  "new_apis": [],
+  "db_changes": "none",
+  "db_changes_detail": "",
+  "estimated_effort": "3h",
+  "risks": [
+    "改动贯穿 Controller→Service→Mapper→XML 四层，任一层签名不一致将启动报错，需整体编译验证",
+    "下拉数据需注入部门列表，departmentService.findAll 已存在，无新增查询风险",
+    "员工删除为 GET 请求（delete/{id}），与本需求无关但同页操作，勿误触"
+  ],
+  "clue_verification": "客户线索 3 条全部核实（EmployeeController.search、EmployeeMapper.xml、employee-list.html 均存在且命中）。补充发现：改动需贯穿 Controller→Service→Mapper→XML 四层，客户未提及的 EmployeeMapper.java 与 Service 层需同步加参。",
+  "created_by": "dev-ai",
+  "created_at": "2026-10-09T02:51:04.806029Z"
+}
