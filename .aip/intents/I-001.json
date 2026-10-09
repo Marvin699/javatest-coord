@@ -5,8 +5,20 @@
   "title": "员工列表支持按部门筛选",
   "description": "管理员在员工列表页希望按部门下拉筛选员工，减少翻页查找时间。保留现有搜索功能。",
   "priority": "high",
-  "raw_quote": "",
-  "customer_analysis": null,
+  "raw_quote": "员工列表能不能按部门筛一下，不然找个太麻烦了",
+  "customer_analysis": {
+    "suspected_modules": [
+      "员工管理",
+      "部门数据"
+    ],
+    "suspected_files": [
+      "src/main/java/com/hrsystem/controller/admin/EmployeeController.java",
+      "src/main/resources/mapper/EmployeeMapper.xml",
+      "src/main/resources/templates/admin/employee-list.html"
+    ],
+    "rationale": "列表页在 EmployeeController，筛选要在查询里加 department_id 条件",
+    "confidence": 0.75
+  },
   "assumptions": [],
   "needs_clarification": [],
   "acceptance_criteria": [],
