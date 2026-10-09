@@ -21,13 +21,20 @@
   "assumptions": [],
   "needs_clarification": [],
   "acceptance_criteria": [],
-  "status": "submitted",
+  "status": "analyzing",
   "history": [
     {
       "at": "2026-10-09T03:01:13.171760Z",
       "from_status": "draft",
       "to_status": "submitted",
       "by": "customer-ai",
+      "note": ""
+    },
+    {
+      "at": "2026-10-09T03:01:43.326046Z",
+      "from_status": "submitted",
+      "to_status": "analyzing",
+      "by": "dev-ai",
       "note": ""
     }
   ]
