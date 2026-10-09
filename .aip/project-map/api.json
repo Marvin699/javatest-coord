@@ -1,6 +1,24 @@
 {
-  "_说明": "由开发侧 AI 填写后删除本字段；只收录代码里真实存在的接口",
   "apis": [
-    { "method": "GET", "path": "/api/orders", "desc": "订单列表", "module": "orders" }
-  ]
+    { "method": "GET",  "path": "/",                        "desc": "根路径（重定向登录）", "module": "auth" },
+    { "method": "GET",  "path": "/login",                   "desc": "登录页", "module": "auth" },
+    { "method": "GET",  "path": "/403",                     "desc": "无权限页", "module": "auth" },
+    { "method": "GET",  "path": "/admin/dashboard",         "desc": "管理端首页", "module": "admin" },
+    { "method": "GET",  "path": "/admin/department/list",   "desc": "部门列表", "module": "department" },
+    { "method": "GET",  "path": "/admin/department/detail/{id}", "desc": "部门详情", "module": "department" },
+    { "method": "GET",  "path": "/admin/department/add",    "desc": "部门新增表单", "module": "department" },
+    { "method": "POST", "path": "/admin/department/add",    "desc": "保存新部门", "module": "department" },
+    { "method": "GET",  "path": "/admin/department/edit/{id}", "desc": "部门编辑表单", "module": "department" },
+    { "method": "POST", "path": "/admin/department/edit",   "desc": "保存部门修改", "module": "department" },
+    { "method": "GET",  "path": "/admin/department/delete/{id}", "desc": "删除部门", "module": "department" },
+    { "method": "GET",  "path": "/admin/employee/list",     "desc": "员工列表", "module": "employee" },
+    { "method": "GET",  "path": "/admin/employee/search",   "desc": "员工搜索", "module": "employee" },
+    { "method": "GET",  "path": "/admin/employee/add",      "desc": "员工新增表单", "module": "employee" },
+    { "method": "POST", "path": "/admin/employee/add",      "desc": "保存新员工", "module": "employee" },
+    { "method": "GET",  "path": "/admin/employee/edit/{id}", "desc": "员工编辑表单", "module": "employee" },
+    { "method": "POST", "path": "/admin/employee/edit",     "desc": "保存员工修改", "module": "employee" },
+    { "method": "GET",  "path": "/admin/employee/delete/{id}", "desc": "删除员工", "module": "employee" },
+    { "method": "GET",  "path": "/employee/dashboard",      "desc": "员工端首页", "module": "employee" }
+  ],
+  "_note": "Thymeleaf 服务端渲染，无独立 REST API。以上已逐一核对 Controller 注解（2026-10-09），与代码一致"
 }

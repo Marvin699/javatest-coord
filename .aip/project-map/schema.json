@@ -1,6 +1,46 @@
 {
-  "_说明": "由开发侧 AI 填写后删除本字段；只收录真实存在的数据表",
+  "database": "hr_system（MySQL，utf8mb4）",
   "tables": [
-    { "name": "orders", "fields": ["id", "user_id", "amount", "status"], "desc": "订单主表" }
-  ]
+    {
+      "name": "department",
+      "desc": "部门表",
+      "columns": [
+        { "name": "id",          "type": "INT AUTO_INCREMENT", "pk": true },
+        { "name": "name",        "type": "VARCHAR(50)",  "not_null": true },
+        { "name": "code",        "type": "VARCHAR(20)",  "not_null": true, "unique": true },
+        { "name": "create_time", "type": "DATETIME", "default": "CURRENT_TIMESTAMP" }
+      ]
+    },
+    {
+      "name": "employee",
+      "desc": "员工表（兼登录账号：username/password/role）",
+      "columns": [
+        { "name": "id",            "type": "INT AUTO_INCREMENT", "pk": true },
+        { "name": "name",          "type": "VARCHAR(50)", "not_null": true },
+        { "name": "emp_no",        "type": "VARCHAR(20)", "not_null": true, "unique": true },
+        { "name": "gender",        "type": "VARCHAR(4)",  "not_null": true },
+        { "name": "position",      "type": "VARCHAR(50)", "not_null": true },
+        { "name": "birth_date",    "type": "DATE" },
+        { "name": "department_id", "type": "INT", "not_null": true, "fk": "department.id" },
+        { "name": "username",      "type": "VARCHAR(50)", "not_null": true, "unique": true },
+        { "name": "password",      "type": "VARCHAR(100)", "not_null": true, "note": "BCrypt" },
+        { "name": "role",          "type": "VARCHAR(20)", "not_null": true, "default": "EMPLOYEE", "enum": ["ADMIN", "EMPLOYEE"] },
+        { "name": "create_time",   "type": "DATETIME", "default": "CURRENT_TIMESTAMP" }
+      ]
+    },
+    {
+      "name": "operation_log",
+      "desc": "操作日志表（由 LogAspect 切面自动写入）",
+      "columns": [
+        { "name": "id",          "type": "INT AUTO_INCREMENT", "pk": true },
+        { "name": "username",    "type": "VARCHAR(50)", "not_null": true },
+        { "name": "operation",   "type": "VARCHAR(100)", "not_null": true },
+        { "name": "method",      "type": "VARCHAR(200)" },
+        { "name": "params",      "type": "TEXT" },
+        { "name": "ip",          "type": "VARCHAR(50)" },
+        { "name": "create_time", "type": "DATETIME", "default": "CURRENT_TIMESTAMP" }
+      ]
+    }
+  ],
+  "_note": "依据 sql/init.sql 逐列录入，未做字段增删推断"
 }
