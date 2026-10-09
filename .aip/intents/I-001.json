@@ -1,0 +1,23 @@
+{
+  "id": "I-001",
+  "created_by": "customer-ai",
+  "created_at": "2026-10-09T02:49:05.615387Z",
+  "title": "员工列表支持按部门筛选",
+  "description": "管理员在员工列表页希望按部门下拉筛选员工，减少翻页查找时间。保留现有搜索功能。",
+  "priority": "high",
+  "raw_quote": "",
+  "customer_analysis": null,
+  "assumptions": [],
+  "needs_clarification": [],
+  "acceptance_criteria": [],
+  "status": "submitted",
+  "history": [
+    {
+      "at": "2026-10-09T02:49:05.616882Z",
+      "from_status": "draft",
+      "to_status": "submitted",
+      "by": "customer-ai",
+      "note": ""
+    }
+  ]
+}
