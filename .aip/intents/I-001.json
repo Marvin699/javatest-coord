@@ -22,7 +22,7 @@
   "assumptions": [],
   "needs_clarification": [],
   "acceptance_criteria": [],
-  "status": "proposal_ready",
+  "status": "approved",
   "history": [
     {
       "at": "2026-10-09T02:49:05.616882Z",
@@ -44,6 +44,13 @@
       "to_status": "proposal_ready",
       "by": "developer",
       "note": "方案已产出"
+    },
+    {
+      "at": "2026-10-09T02:51:07.536164Z",
+      "from_status": "proposal_ready",
+      "to_status": "approved",
+      "by": "developer",
+      "note": "方案确认，四层链路改动没问题"
     }
   ]
 }
