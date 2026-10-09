@@ -1,0 +1,11 @@
+{
+  "project": {
+    "name": "JavaTest人事系统"
+  },
+  "notify": {
+    "feishu_webhook": ""
+  },
+  "watcher": {
+    "interval_seconds": 60
+  }
+}
