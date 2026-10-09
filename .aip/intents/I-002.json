@@ -5,8 +5,19 @@
   "title": "部门详情页显示员工数量",
   "description": "管理员打开部门详情页时，希望直接看到该部门当前有多少名员工，不用再去员工列表数。",
   "priority": "medium",
-  "raw_quote": "",
-  "customer_analysis": null,
+  "raw_quote": "部门详情那个页面能不能显示下这个部门有多少人",
+  "customer_analysis": {
+    "suspected_modules": [
+      "部门详情",
+      "员工数据"
+    ],
+    "suspected_files": [
+      "src/main/java/com/hrsystem/controller/admin/DepartmentController.java",
+      "src/main/resources/templates/admin/department-detail.html"
+    ],
+    "rationale": "详情页在 DepartmentController 的 detail/{id}，加个员工计数即可",
+    "confidence": 0.8
+  },
   "assumptions": [],
   "needs_clarification": [],
   "acceptance_criteria": [],
