@@ -21,7 +21,7 @@
   "assumptions": [],
   "needs_clarification": [],
   "acceptance_criteria": [],
-  "status": "analyzing",
+  "status": "proposal_ready",
   "history": [
     {
       "at": "2026-10-09T03:01:13.171760Z",
@@ -36,6 +36,13 @@
       "to_status": "analyzing",
       "by": "dev-ai",
       "note": ""
+    },
+    {
+      "at": "2026-11-06T11:37:42.675586Z",
+      "from_status": "analyzing",
+      "to_status": "proposal_ready",
+      "by": "developer",
+      "note": "方案已产出"
     }
   ]
 }
