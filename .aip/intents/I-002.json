@@ -21,7 +21,7 @@
   "assumptions": [],
   "needs_clarification": [],
   "acceptance_criteria": [],
-  "status": "proposal_ready",
+  "status": "approved",
   "history": [
     {
       "at": "2026-10-09T03:01:13.171760Z",
@@ -43,6 +43,13 @@
       "to_status": "proposal_ready",
       "by": "developer",
       "note": "方案已产出"
+    },
+    {
+      "at": "2026-11-06T11:37:48.591776Z",
+      "from_status": "proposal_ready",
+      "to_status": "approved",
+      "by": "developer",
+      "note": "冒烟：验证 dispatch"
     }
   ]
 }
